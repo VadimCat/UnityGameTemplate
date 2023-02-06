@@ -1,31 +1,30 @@
 using Client.States;
-using Client.UI.Screens;
+using Core.Compliments;
+using Ji2.Models.Analytics;
 using Ji2Core.Core;
-using Ji2Core.Core.Analytics;
 using Ji2Core.Core.Audio;
-using Ji2Core.Core.Compliments;
 using Ji2Core.Core.ScreenNavigation;
 using Ji2Core.Core.States;
 using Ji2Core.Core.UserInput;
 using Ji2Core.Plugins.AppMetrica;
-using Models;
+using UI.Background;
 using UnityEngine;
 
 namespace Client
 {
-    public class Bootstrap : BootstraperBase
+    public class Bootstrap : BootstrapBase
     {
         // [SerializeField] private LevelsViewDataStorageBase<> levelsStorageBase;
         
         [SerializeField] private ScreenNavigator screenNavigator;
         [SerializeField] private BackgroundService backgroundService;
         [SerializeField] private UpdateService updateService;
-        [SerializeField] private ComplimentsWordsService complimentsWordsService;
+        [SerializeField] private TextCompliments complimentsWordsService;
         [SerializeField] private AudioService audioService;
         
-        private AppSession appSession; 
-            
-        private readonly Context context = new();
+        private AppSession appSession;
+
+        private readonly Context context = Context.GetInstance();
 
         protected override void Start()
         {

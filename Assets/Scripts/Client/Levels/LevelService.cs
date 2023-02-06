@@ -1,11 +1,11 @@
 using System;
 using System.Threading.Tasks;
-using Client.UI.Screens;
 using Cysharp.Threading.Tasks;
+using Ji2.Models.Analytics;
 using Ji2Core.Core;
-using Ji2Core.Core.Analytics;
 using Ji2Core.Core.ScreenNavigation;
 using Ji2Core.Models;
+using UI.Background;
 using UnityEngine;
 
 namespace Client
